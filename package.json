@@ -1,0 +1,25 @@
+{
+    "name": "hvm-lang",
+    "displayName": "HVM Lang",
+    "description": "Syntax highlighting for the HVM language",
+    "version": "0.0.2",
+    "engines": {
+        "vscode": "^1.66.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "hvm",
+            "aliases": ["HVM", "hvm"],
+            "extensions": [".hvm"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "hvm",
+            "scopeName": "source.hvm",
+            "path": "./syntaxes/hvm.tmLanguage.json"
+        }]
+    }
+}

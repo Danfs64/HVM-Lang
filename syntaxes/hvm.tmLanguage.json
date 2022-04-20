@@ -1,0 +1,56 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "HVM",
+	"patterns": [
+		{"include": "#comments"},
+		{"include": "#strings"},
+		{"include": "#keywords"},
+		{"include": "#constructors"},
+		{"include": "#variables"},
+		{"include": "#numerals"}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.hvm",
+				"match": "\\b(let)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.hvm",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.hvm",
+					"match": "\\\\."
+				}
+			]
+		},
+		"numerals": {
+			"patterns": [{
+				"name": "constant.numeric.hvm",
+				"match": "\\b[0-9]+\\b"
+			}]
+		},
+		"constructors": {
+			"patterns": [{
+				"name": "entity.name.function.hvm",
+				"match": "\\b[A-Z][\\w]*\\b"
+			}]
+		},
+		"variables": {
+			"patterns": [{
+				"name": "variable.other.hvm",
+				"match": "\\b[a-z][\\w]*\\b"
+			}]
+		},
+		"comments": {
+			"patterns": [{
+				"name": "comment.line.double-slash.hvm",
+				"match": "//.*$"
+			}]
+		}
+	},
+	"scopeName": "source.hvm"
+}
