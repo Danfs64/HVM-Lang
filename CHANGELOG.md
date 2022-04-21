@@ -1,20 +1,40 @@
-# Change Log
+# Changelog
+
+This changelog format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
+and its versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
-- Operator highlighting
-- Should Constructors with dot-divided names match the whole name or just the first term? (so far, just first name)
-- Should Variables be matched/highlighted at all? (so far, yes)
-- Should the term (Main) be a keyword or just a normal Constructor? (so far, Constructor)
-- Modularize the grammar, probably
+- Check edge-cases for matches that don't use `\b` as delimiters;
+- Modularize the grammar in multiple files;
+- Make highlighting togglable by category (Constructors, Operators);
+  - If I can make that, put back variables, with highlighting disabled by default;
 
-## [0.0.2] - 2022-04-20
+## [0.3.0] - 2022-04-21
 
-- [Added]
-  - Matching: Constructors, Line Comments, Strings, Numerals, Keywords (let) and Variables
+### Added
 
-## [0.0.1] - 2022-04-19
+- Matching Operators, such as `=` and `>>`. If they are highlighted or not will depend on the theme you're using;
+- Matching Keywords `dup`, `@` and `λ`;
+- Matching Characters - any single character enclosed by single quotes
 
-- Initial release, freshly generated from Yeoman
+### Changed
 
-P.S.: This version wasn't commited to Git
+- Constructor matching will match a full constructor name even if it is divided by dots;
+- Variables are no longer matched;
+
+## [0.2.0] - 2022-04-20
+
+### Added
+
+- Matching:
+  - Constructors;
+  - Line comments;
+  - Strings;
+  - Numerals;
+  - Keywords (`let`);
+  - Variables;
+
+## [0.1.0] - 2022-04-19 - [Uncommited]
+
+- Initial release, freshly generated from Yeoman;

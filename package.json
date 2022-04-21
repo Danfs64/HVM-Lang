@@ -2,7 +2,7 @@
     "name": "hvm-lang",
     "displayName": "HVM Lang",
     "description": "Syntax highlighting for the HVM language",
-    "version": "0.0.2",
+    "version": "0.3.0",
     "engines": {
         "vscode": "^1.66.0"
     },

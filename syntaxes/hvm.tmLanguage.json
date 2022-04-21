@@ -6,15 +6,22 @@
 		{"include": "#strings"},
 		{"include": "#keywords"},
 		{"include": "#constructors"},
-		{"include": "#variables"},
-		{"include": "#numerals"}
+		{"include": "#operators"},
+		{"include": "#numerals"},
+		{"include": "#characters"}
 	],
 	"repository": {
 		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.hvm",
-				"match": "\\b(let)\\b"
-			}]
+			"patterns": [
+				{
+					"name": "keyword.control.hvm",
+					"match": "\\b(let|dup)\\b"
+				},
+				{
+					"name": "keyword.control.hvm",
+					"match": "(@|λ)"
+				}
+			]
 		},
 		"strings": {
 			"name": "string.quoted.double.hvm",
@@ -27,6 +34,10 @@
 				}
 			]
 		},
+		"characters": {
+			"name": "string.quoted.single",
+			"match": "'.'"
+		},
 		"numerals": {
 			"patterns": [{
 				"name": "constant.numeric.hvm",
@@ -36,7 +47,7 @@
 		"constructors": {
 			"patterns": [{
 				"name": "entity.name.function.hvm",
-				"match": "\\b[A-Z][\\w]*\\b"
+				"match": "\\b[A-Z][\\w]*(\\.[\\w]*)*\\b"
 			}]
 		},
 		"variables": {
@@ -44,6 +55,26 @@
 				"name": "variable.other.hvm",
 				"match": "\\b[a-z][\\w]*\\b"
 			}]
+		},
+		"operators": {
+			"patterns": [
+				{
+					"name": "keyword.operator.equivalence.hvm",
+					"match": "="
+				},
+				{
+					"name": "keyword.operator.arithmetic.hvm",
+					"match": "(\\+|-|\\*|/|%)"
+				},
+				{
+					"name": "keyword.operator.bitwise.hvm",
+					"match": "(&|\\||\\^|<<|>>)"
+				},
+				{
+					"name": "keyword.operator.comparison.hvm",
+					"match": "(<=|<|==|>=|>|!=)"
+				}
+			]
 		},
 		"comments": {
 			"patterns": [{
