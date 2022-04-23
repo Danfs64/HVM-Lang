@@ -11,12 +11,13 @@ The highlighting so far includes:
 - comments;
 - literals such as strings, characters and numbers;
 
-## How to Use
+## How to Install/Use
 
 You can either:
 
 - Install it directly from VSCode Marketplace; or
-- Clone this repository, open it with VSCode, and press F5. This will open a new VSCode instance with the extension running
+- Download the latest release [here](https://github.com/Danfs64/HVM-Lang/releases) and install it using the command: `code --install-extension <path-to-vsix-file>`; or
+- Clone this repository, open it with VSCode, and press F5. This will open a new VSCode instance with the extension running. Since the instance is ephemeral, you would need to do this every time you want to use the extension, making this is not recommended if you want to continuously use it.
 
 ## Known Issues
 
