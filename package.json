@@ -4,15 +4,24 @@
     "description": "Syntax highlighting for the HVM language",
     "version": "0.3.0",
     "publisher": "Danfs",
+    "license": "SEE LICENSE IN LICENSE",
     "repository": {
         "type": "git",
         "url": "https://github.com/Danfs64/HVM-Lang.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Danfs64/HVM-Lang/issues"
     },
     "engines": {
         "vscode": "^1.66.0"
     },
     "categories": [
         "Programming Languages"
+    ],
+    "keywords": [
+        "HVM",
+        "Kind",
+        "Kindelia"
     ],
     "contributes": {
         "languages": [{
