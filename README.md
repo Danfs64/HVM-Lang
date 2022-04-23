@@ -11,6 +11,13 @@ The highlighting so far includes:
 - comments;
 - literals such as strings, characters and numbers;
 
+## How to Use
+
+You can either:
+
+- Install it directly from VSCode Marketplace; or
+- Clone this repository, open it with VSCode, and press F5. This will open a new VSCode instance with the extension running
+
 ## Known Issues
 
 - None (yet)
