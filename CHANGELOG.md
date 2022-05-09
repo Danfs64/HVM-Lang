@@ -5,11 +5,6 @@ and its versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-- Check edge-cases for matches that don't use `\b` as delimiters;
-- Make highlighting togglable by category (Constructors, Operators);
-  - If I can make that, put back variables, with highlighting disabled by default;
-- Modularize the grammar in multiple files - Doesn't look possible?;
-
 ## [0.3.0] - 2022-04-21
 
 ### Added
