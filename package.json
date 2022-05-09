@@ -2,7 +2,7 @@
     "name": "hvm-lang",
     "displayName": "HVM Lang",
     "description": "Syntax highlighting for the HVM language",
-    "version": "0.3.0",
+    "version": "1.0.0",
     "publisher": "Danfs",
     "license": "SEE LICENSE IN LICENSE",
     "repository": {

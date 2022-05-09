@@ -5,6 +5,12 @@ and its versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.0.0] - 2022-05-08
+
+### Changed
+
+- Organizing `hvm.tmLanguage.json` a bit
+
 ## [0.3.0] - 2022-04-21
 
 ### Added
