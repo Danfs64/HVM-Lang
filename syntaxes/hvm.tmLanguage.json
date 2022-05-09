@@ -1,14 +1,13 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "HVM",
+	"scopeName": "source.hvm",
 	"patterns": [
 		{"include": "#comments"},
-		{"include": "#strings"},
 		{"include": "#keywords"},
 		{"include": "#constructors"},
 		{"include": "#operators"},
-		{"include": "#numerals"},
-		{"include": "#characters"}
+		{"include": "#literals"}
 	],
 	"repository": {
 		"keywords": {
@@ -23,26 +22,28 @@
 				}
 			]
 		},
-		"strings": {
-			"name": "string.quoted.double.hvm",
-			"begin": "\"",
-			"end": "\"",
+		"literals": {
 			"patterns": [
 				{
-					"name": "constant.character.escape.hvm",
-					"match": "\\\\."
+					"name": "constant.numeric.hvm",
+					"match": "\\b[0-9]+\\b"
+				},
+				{
+					"name": "string.quoted.single.hvm",
+					"match": "'.'"
+				},
+				{
+					"name": "string.quoted.double.hvm",
+					"begin": "\"",
+					"end": "\"",
+					"patterns": [
+						{
+							"name": "constant.character.escape.hvm",
+							"match": "\\\\."
+						}
+					]
 				}
 			]
-		},
-		"characters": {
-			"name": "string.quoted.single",
-			"match": "'.'"
-		},
-		"numerals": {
-			"patterns": [{
-				"name": "constant.numeric.hvm",
-				"match": "\\b[0-9]+\\b"
-			}]
 		},
 		"constructors": {
 			"patterns": [{
@@ -82,6 +83,5 @@
 				"match": "//.*$"
 			}]
 		}
-	},
-	"scopeName": "source.hvm"
+	}
 }
