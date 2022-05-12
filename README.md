@@ -17,7 +17,7 @@ You can either:
 
 - Install it directly from VSCode Marketplace; or
 - Download the latest release [here](https://github.com/Danfs64/HVM-Lang/releases) and install it using the command: `code --install-extension <path-to-vsix-file>`; or
-- Clone this repository, open it with VSCode, and press F5. This will open a new VSCode instance with the extension running. Since the instance is ephemeral, you would need to do this every time you want to use the extension, making this is not recommended if you want to continuously use it.
+- Clone this repository, open it with VSCode, and press F5. This will open a new VSCode instance with the extension running. Since the instance is ephemeral, you would need to do this every time you want to use the extension, making this method not recommended for continuous use.
 
 ## Known Issues
 
