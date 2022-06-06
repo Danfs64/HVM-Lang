@@ -42,6 +42,17 @@
 							"match": "\\\\."
 						}
 					]
+				},
+				{
+					"name": "string.backtick.hvm",
+					"begin": "`",
+					"end": "`",
+					"patterns": [
+						{
+							"name": "constant.character.escape.hvm",
+							"match": "\\\\."
+						}
+					]
 				}
 			]
 		},
