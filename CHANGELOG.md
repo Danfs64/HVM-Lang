@@ -7,7 +7,9 @@ and its versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.
 
 ## [1.1.0] - 2022-06-06
 
-- Added strings using backticks
+### Added
+
+- Strings using backticks
 
 ## [1.0.0] - 2022-05-08
 
