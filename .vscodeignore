@@ -1,4 +1,5 @@
 .vscode/**
 .vscode-test/**
 .gitignore
+langium-quickstart.md
 vsc-extension-quickstart.md

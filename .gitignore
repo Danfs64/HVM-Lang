@@ -1,2 +1,4 @@
 node_modules
 *.vsix
+out/
+src/language-server/generated/

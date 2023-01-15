@@ -1,0 +1,12 @@
+{
+    "projectName": "Hvm",
+    "languages": [{
+        "id": "hvm",
+        "grammar": "src/language-server/hvm.langium",
+        "fileExtensions": [".hvm"],
+        "textMate": {
+            "out": "syntaxes/hvm.tmLanguage.json"
+        }
+    }],
+    "out": "src/language-server/generated"
+}

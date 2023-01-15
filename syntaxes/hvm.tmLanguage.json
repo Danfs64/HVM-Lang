@@ -1,98 +1,47 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "HVM",
-	"scopeName": "source.hvm",
-	"patterns": [
-		{"include": "#comments"},
-		{"include": "#keywords"},
-		{"include": "#constructors"},
-		{"include": "#operators"},
-		{"include": "#literals"}
-	],
-	"repository": {
-		"keywords": {
-			"patterns": [
-				{
-					"name": "keyword.control.hvm",
-					"match": "\\b(let|dup)\\b"
-				},
-				{
-					"name": "keyword.control.hvm",
-					"match": "(@|λ)"
-				}
-			]
-		},
-		"literals": {
-			"patterns": [
-				{
-					"name": "constant.numeric.hvm",
-					"match": "\\b[0-9]+\\b"
-				},
-				{
-					"name": "string.quoted.single.hvm",
-					"match": "'.'"
-				},
-				{
-					"name": "string.quoted.double.hvm",
-					"begin": "\"",
-					"end": "\"",
-					"patterns": [
-						{
-							"name": "constant.character.escape.hvm",
-							"match": "\\\\."
-						}
-					]
-				},
-				{
-					"name": "string.backtick.hvm",
-					"begin": "`",
-					"end": "`",
-					"patterns": [
-						{
-							"name": "constant.character.escape.hvm",
-							"match": "\\\\."
-						}
-					]
-				}
-			]
-		},
-		"constructors": {
-			"patterns": [{
-				"name": "entity.name.function.hvm",
-				"match": "\\b[A-Z][\\w]*(\\.[\\w]*)*\\b"
-			}]
-		},
-		"variables": {
-			"patterns": [{
-				"name": "variable.other.hvm",
-				"match": "\\b[a-z][\\w]*\\b"
-			}]
-		},
-		"operators": {
-			"patterns": [
-				{
-					"name": "keyword.operator.equivalence.hvm",
-					"match": "="
-				},
-				{
-					"name": "keyword.operator.arithmetic.hvm",
-					"match": "(\\+|-|\\*|/|%)"
-				},
-				{
-					"name": "keyword.operator.bitwise.hvm",
-					"match": "(&|\\||\\^|<<|>>)"
-				},
-				{
-					"name": "keyword.operator.comparison.hvm",
-					"match": "(<=|<|==|>=|>|!=)"
-				}
-			]
-		},
-		"comments": {
-			"patterns": [{
-				"name": "comment.line.double-slash.hvm",
-				"match": "//.*$"
-			}]
-		}
-	}
+  "name": "hvm",
+  "scopeName": "source.hvm",
+  "fileTypes": [
+    ".hvm"
+  ],
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "name": "keyword.control.hvm",
+      "match": ""
+    },
+    {
+      "name": "string.quoted.double.hvm",
+      "begin": "\"",
+      "end": "\""
+    },
+    {
+      "name": "string.quoted.single.hvm",
+      "begin": "'",
+      "end": "'"
+    },
+    {
+      "name": "string.quoted.backtick.hvm",
+      "begin": "`",
+      "end": "`"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "begin": "//",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.whitespace.comment.leading.hvm"
+            }
+          },
+          "end": "(?=$)",
+          "name": "comment.line.hvm"
+        }
+      ]
+    }
+  }
 }
