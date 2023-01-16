@@ -3,11 +3,11 @@ grammar Hvm
 import 'terminals'
 
 entry File:
-    (constructors+=Constructor)*
+    (constructors+=ConstructorDefinition)*
 ;
 
 Constructor:
-    NullaryConstructor // | N_aryConstructor
+    NullaryConstructor | N_aryConstructor
 ;
 
 NullaryConstructor infers Constructor:
@@ -23,25 +23,25 @@ ConstructorDefinition:
 ;
 
 Statement:
-    '(' Statement ')' | Constructor // | BinaryOP | STRING
+    '(' Statement ')' | Constructor | BinaryOP //| STRING
 ;
 
-// BinaryOP:
-//     '(' op=Operator arg1=(U60|BinaryOP) arg2=(U60|BinaryOP) ')'
-// ;
+BinaryOP:
+    '(' op=Operator arg1=(U60|BinaryOP) arg2=(U60|BinaryOP) ')'
+;
 
-// Operator returns string:
-//     MathOperator | BitwiseOperator | EqualityOperator
-// ;
+Operator returns string:
+    MathOperator | BitwiseOperator | EqualityOperator
+;
 
-// MathOperator returns string:
-//     '+' | '-' | '*' | '/' | '%'
-// ;
+MathOperator returns string:
+    '+' | '-' | '*' | '/' | '%'
+;
 
-// BitwiseOperator returns string:
-//     '&' | '||' | '<<' | '>>'
-// ;
+BitwiseOperator returns string:
+    '&' | '||' | '<<' | '>>'
+;
 
-// EqualityOperator returns string:
-//     '==' | '!=' | '<' | '<=' | '>' | '>='
-// ;
+EqualityOperator returns string:
+    '==' | '!=' | '<' | '<=' | '>' | '>='
+;

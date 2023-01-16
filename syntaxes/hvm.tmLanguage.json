@@ -2,7 +2,7 @@
   "name": "hvm",
   "scopeName": "source.hvm",
   "fileTypes": [
-    ".hvm"
+    ".hvm2"
   ],
   "patterns": [
     {

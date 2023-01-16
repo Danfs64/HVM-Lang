@@ -3,7 +3,7 @@
     "languages": [{
         "id": "hvm",
         "grammar": "src/language-server/hvm.langium",
-        "fileExtensions": [".hvm"],
+        "fileExtensions": [".hvm2"],
         "textMate": {
             "out": "syntaxes/hvm.tmLanguage.json"
         }
