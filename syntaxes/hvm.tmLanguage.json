@@ -10,7 +10,7 @@
     },
     {
       "name": "keyword.control.hvm",
-      "match": ""
+      "match": "\\b(let)\\b"
     },
     {
       "name": "string.quoted.double.hvm",
