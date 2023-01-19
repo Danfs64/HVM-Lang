@@ -24,9 +24,8 @@ export class HvmValidator {
     /**
      * Given an expression, check its LHS for repeated variables,
      * and then check its RHS for unbound variables
-     * @param exp The expression to be checked
-    */
-   checkVariables(exp: Expression, accept: ValidationAcceptor): void {
+     */
+    checkVariables(exp: Expression, accept: ValidationAcceptor): void {
         /**
          * Return the set of variables names of a LHS Constructor
          * It highlights warnings on repeated variables
