@@ -2,7 +2,7 @@ import {
     ValidationAcceptor,
     ValidationChecks
 } from 'langium';
-import { Constructor, Expression, HvmAstType, isConstructor, isTerm, isVariable, Statement } from './generated/ast';
+import { Constructor, Expression, File, HvmAstType, isConstructor, isTerm, isVariable, Statement } from './generated/ast';
 import type { HvmServices } from './hvm-module';
 
 /**
@@ -12,6 +12,7 @@ export function registerValidationChecks(services: HvmServices) {
     const registry = services.validation.ValidationRegistry;
     const validator = services.validation.HvmValidator;
     const checks: ValidationChecks<HvmAstType> = {
+        File: validator.checkArity,
         Expression: validator.checkVariables,
     };
     registry.register(checks, validator);
@@ -89,4 +90,23 @@ export class HvmValidator {
         check_vars(exp.rhs, lhs_vars)
     }
 
+    /**
+     * Given a File, check if every LHS constructor has consistent arity
+     */
+    checkArity(file: File, accept: ValidationAcceptor): void {
+        const map = new Map<string, number>()
+
+        for(const exp of file.expressions) {
+            const cons = exp.lhs
+            const arity = map.get(cons.name)
+            // First time reading this constructor, save the arity
+            if(arity === undefined) {
+                map.set(cons.name, cons.args.length)
+            }
+            // Not first time reading it, check the arity against the one saved
+            else if(arity !== cons.args.length) {
+                accept("error", "This constructor has inconsistent arity compared to a previously declared one", { node: cons })
+            }
+        }
+    }
 }
